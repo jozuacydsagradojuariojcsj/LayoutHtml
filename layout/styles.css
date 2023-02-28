@@ -71,12 +71,8 @@ footer{
         display: none !important;
         margin: 0px !important;
     }
-    #content-wrapper{
-        flex-direction: column !important;
-        
-    }
     #SideRight{
-        height: 300px !important;
+        display: none !important;
     }
   }
   
