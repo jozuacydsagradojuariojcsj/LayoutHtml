@@ -3,13 +3,7 @@ body{
     width: 100%;
     
 }
-section#container *{
-    display: flex;
-}
-
-section#header-wrapper > header{
-    display: flex;
-    height: 100px;
+header{
     border: 1px solid black;
     margin: 10px;
     
@@ -22,90 +16,161 @@ section#header-wrapper > header{
     flex-grow: 1;
 }
 section#content-wrapper > aside,main {
-    display: flex;
-    height: 500px;
+    
     border: 1px solid black;
     margin: 10px;
 }
+
 section#LeftSide {
-    display: flex;
+    
     flex-direction: column;
     margin: 10px;
     flex-grow: 1;
 }
 #SideTop{
-    height: 100px;
+    
     border: 1px solid black;
 }
 #SideBot{
-    height: 375px;
+    
     border: 1px solid black;
-    margin-top: 20px;
-}
-#main{
-    flex-grow: 4;
     
 }
-#SideRight{
-    flex-grow: 1;
-}
+
+
 footer{
     height: 50px;
     border: 1px solid black;
     margin: 10px;
-    display: flex;
+    
     flex-grow: 5;
 }
-/* Extra small devices (phones, 600px and down) */
-
-
-@media only screen and (max-width: 600px) {
-    #header-wrapper{
+/* Extra small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+    #header-wrapper >{
         flex-direction: column;
     }
-    #header-wrapper>*{
-        height: 50px !important;
-    }
+    header{
+        height: 6vh;
 
-    #LeftSide{
-        display: none !important;
-        margin: 0px !important;
+    }
+    
+    #LeftSide, #SideRight{
+        display: none;
+    }
+    #main{
+        height: 100vh;
+    }
+    div{
+        
+        text-align: center;
+        border: 1px solid black;
+        margin: 1vh;
+        height: 30vh;
+    }
+    header#head1 > *{
+        position: relative; 
+        float: right;
+    }
+    #facebook{
+        margin-left: -100px;
+    }
+    #nav-bar > *{
+        
+        color: red;
+    }
+   
+    
+    ul li{
+        
+        display: inline;
+    }
+}
+@media only screen and (min-width:481px){
+    #header-wrapper{
+        flex-direction: column;
+        
+    }
+    #header-wrapper>*{
+        height: 5vh;
+    }
+    #LeftSide, #main2{
+        display: none;
+    }
+    #content-wrapper{
+        display: flex;
+    }
+    #main-wrapper{
+        flex-grow: 5;
+    }
+    #main{
+        height: 100vh;
     }
     #SideRight{
-        display: none !important;
+        flex-grow: 1;
     }
-  }
-  
+   
+    #SideRight{
+        height: 100vh;
+    }
+}  
   /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
+    
     #header-wrapper{
         flex-direction: column;
     }
     #header-wrapper>*{
-        height: 50px !important;
+        display: flex;
+        height: 5vh ;
     }
-    #LeftSide {
-        display: none !important;
+    #head3, #head4, #LeftSide, #main2{
+        display: none;
     }
-    #main{
-        flex-grow: 4 ;
-    }
-  }
-  
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    #header-wrapper{
+    #content-wrapper{
+        display: flex;
         flex-direction: row;
     }
+    
+    #main-wrapper > #main{
+        flex-grow: 4 ;
+    }
+}
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #header-wrapper{
+        display: flex;
+        flex-direction: row;
+    }
+    #head2{
+        display: none;
+    }
+    
     #LeftSide{
-        display: block !important;
-      }
-    #main{
-        flex-grow: 4 !important;
-      }
-  }
+        display: block;
+        margin: 0px;
+        flex-grow: 1;
+    }
+    #SideTop{
+        display: none;
+    }
+    #SideBot{
+        height: 82vh;
+    }
+    #main2{
+        display: block;
+    }
+    #main-wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 5;
+    }
+    
+    
+}
   
   /* Large devices (laptops/desktops, 992px and up) */
-  @media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
      
-  }
+}
